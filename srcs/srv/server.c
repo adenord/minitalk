@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 15:32:36 by adenord           #+#    #+#             */
-/*   Updated: 2023/11/16 17:38:41 by adenord          ###   ########.fr       */
+/*   Updated: 2023/11/16 19:49:06 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ void	handle_signal(int signum)
 		g_state = 0;
 	if (signum == SIGUSR2)
 		g_state = 1;
-	signal(SIGUSR1, handle_signal);
-	signal(SIGUSR2, handle_signal);
 }
 
 int	constructor(void)
